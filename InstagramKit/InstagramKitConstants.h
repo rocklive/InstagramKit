@@ -86,6 +86,11 @@ typedef NS_OPTIONS(NSUInteger, InstagramKitLoginScope)
     InstagramKitLoginScopeLikes = 1<<3
 };
 
+typedef NS_ENUM(NSInteger, InstagramKitLoginType)
+{
+    InstagramKitLoginTypeToken = 0,
+    InstagramKitLoginTypeCode
+};
 
 /*!
  @abstract      The notification posted on changing the authentication token.

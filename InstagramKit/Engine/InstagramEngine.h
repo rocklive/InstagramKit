@@ -72,6 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSURL *)authorizationURLForScope:(InstagramKitLoginScope)scope;
 
+- (NSURL *)authorizationURLForScope:(InstagramKitLoginScope)scope type:(InstagramKitLoginType)type;
 
 /**
  *  A convenience method to extract and save the access code from an URL received in
@@ -83,6 +84,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)receivedValidAccessTokenFromURL:(NSURL *)url
                                   error:(NSError * _Nullable __autoreleasing *)error;
+
+- (BOOL)receivedValidCodeFromURL:(NSURL *)url
+                            code:(NSString* _Nullable __autoreleasing*)code
+                           error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
  *  Validate if authorization is done.
